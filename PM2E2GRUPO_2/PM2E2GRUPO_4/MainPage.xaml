@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E2GRUPO_4.MainPage">
+    <ScrollView VerticalOptions="FillAndExpand">
+        <StackLayout  Padding="5,10,5,10" >
+            <Label Text="PM2E2GRUPO 2" HorizontalOptions="Center"/>
+
+            <Image Source="https://img2.freepng.es/20180921/gxa/kisspng-universidad-tecnolgica-de-honduras-tegucigalpa-u-clases-uth-timeline-timetoast-timelines-5ba4e28494c0d0.3323374415375325486093.jpg" x:Name="imagen" HorizontalOptions="Center" HeightRequest="110" WidthRequest="100" />
+
+
+            <StackLayout Orientation="Horizontal"  BackgroundColor="White" Padding="2,2,2,2">
+                <Button Text="NUEVA UBICACION" FontSize="15" FontAttributes="Bold" x:Name="btn01" Clicked="btn01_Clicked" 
+              WidthRequest="160" HeightRequest="45" 
+             CornerRadius="60" VerticalOptions="Start" HorizontalOptions ="Start" BackgroundColor   ="GreenYellow" Margin="0,3,0,3"/>
+
+                <Button Text="UBICACIONES SALVADAS" FontSize="15" FontAttributes="Bold" 
+            x:Name="btn02"  Clicked="btn02_Clicked"
+            WidthRequest="215" HeightRequest="45" CornerRadius="60" VerticalOptions="EndAndExpand" 
+            HorizontalOptions ="EndAndExpand" BackgroundColor="GreenYellow" Margin="0,3,0,3"/>
+                
+
+            </StackLayout>
+
+            <Image
+            x:Name="image1" HeightRequest="300" WidthRequest="300"
+            ></Image>
+
+
+            <Button
+            Text="CARGAR FOTOGRAFIA" BackgroundColor="Red" VerticalOptions="Center" TextColor="black" FontSize="18"
+            Clicked="Button_Clicked"
+            ></Button>
+
+            <Label Text="LATITUD ACTUAL" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+            <Entry Text=""  Keyboard="Text" x:Name="txtlatitud" TextColor="Black" />
+
+            <Label Text="LONGITUD ACTUAL" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+            <Entry Text=""  Keyboard="Text"  TextColor="Black" x:Name="txtlongitud" />
+
+            <Label Text="DESCRIBA LA UBICACION" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+            <Entry Text=""  Keyboard="Text" x:Name="txtdescripcion"/>
+
+            <Label Text="DESCRIPCION" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+            <Entry Text=""  Keyboard="Text" x:Name="txtdcorta"/>
+
+            <Button Text="SALVAR UBICACION" x:Name="btnguardar" FontSize="15" FontAttributes="Bold" 
+          WidthRequest="220" Clicked="btnguardar_Clicked"
+         HeightRequest="50" CornerRadius="60" VerticalOptions="Center" 
+         HorizontalOptions ="Center" BackgroundColor   ="Green"/>
+
+            <Button Text="UBICACIONES SALVADAS" x:Name="ubicaciones" FontSize="15" FontAttributes="Bold" 
+         WidthRequest="220"
+         HeightRequest="50" CornerRadius="60" VerticalOptions="Center" 
+         HorizontalOptions ="Center" BackgroundColor   ="Green" Clicked="btn02_Clicked"/>
+            <Label Text="©PROGRAMACION MOVIL 2 2022" HorizontalOptions="Center"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

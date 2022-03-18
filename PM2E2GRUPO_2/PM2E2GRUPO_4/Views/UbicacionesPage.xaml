@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E2GRUPO_4.Views.UbicacionesPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry IsVisible="false" x:Name="txtcodigo" ></Entry>
+            <Entry IsVisible="false" x:Name="txtlatitud" ></Entry>
+            <Entry IsVisible="false" x:Name="txtlongitud" ></Entry>
+            <Entry IsVisible="false" x:Name="txtdescripcion" ></Entry>
+            <Entry IsVisible="false" x:Name="txtdcorta" ></Entry>
+
+        </StackLayout>
+    </ContentPage.Content>
+
+
+    <CollectionView ItemsSource="{Binding Ubicaciones}" x:Name="lspersonas">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame Padding="5"
+                       CornerRadius="5"
+                       IsClippedToBounds="False">
+                    <Grid HeightRequest="100">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".3*"/>
+                            <ColumnDefinition Width=".3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height=".5*"/>
+                            <RowDefinition Height=".5*"/>
+                        </Grid.RowDefinitions>
+
+
+                        <Image Grid.RowSpan="2" ></Image>
+                        <Label Grid.Column="1"
+                               FontAttributes="Bold"
+                               FontSize="Small"
+                               Text="{Binding longitud}"
+                               VerticalOptions="Center"/>
+                        <Label Grid.Column="2"
+                               FontAttributes="Bold"
+                               FontSize="Small"
+                               Text="{Binding latitud}"
+                               VerticalOptions="Center"/>
+                        <Label Grid.Column="3"
+                               FontAttributes="Bold"
+                               FontSize="Small"
+                               Text="{Binding descripcion}"
+                               VerticalOptions="Center"/>
+
+
+
+                    </Grid>
+
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Eliminar"
+                     Clicked="tlbeliminar_Clicked"
+                     x:Name="tlbeliminar"></ToolbarItem>
+
+        <ToolbarItem Text="Ver Mapa"
+                     Clicked="tlbmostrar_Clicked"
+                     x:Name="tlbmostrar" ></ToolbarItem>
+
+        <ToolbarItem Text="Ver Mapa2"
+                     Clicked="tlbver_Clicked"
+                     x:Name="tlbver" ></ToolbarItem>
+
+    </ContentPage.ToolbarItems>
+
+
+
+</ContentPage>
